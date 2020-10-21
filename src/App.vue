@@ -1,6 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar
+    <v-content>
+      <router-view>
+
+      </router-view>
+    </v-content>
+    <!-- <v-app-bar
       app
       color="primary"
       dark
@@ -10,7 +15,7 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="@/src/assets/nlogoo.png"
           transition="scale-transition"
           width="40"
         />
@@ -39,19 +44,16 @@
 
     <v-main>
       <HelloWorld/>
-    </v-main>
+    </v-main> -->
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+
 
 export default {
   name: 'App',
 
-  components: {
-    HelloWorld,
-  },
 
   data: () => ({
     //
