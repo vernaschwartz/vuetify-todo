@@ -7,6 +7,29 @@
                 <span>Ninja</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
+            <!--dropdown menu-->
+            <v-menu offset-y>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                    color="primary"
+                    dark
+                    v-bind="attrs"
+                    v-on="on"
+                    >
+                        <span>Menu</span>
+                        <v-icon right>mdi-menu-down</v-icon>
+                    </v-btn>
+                </template>
+                <v-list>
+                    <v-list-item
+                    v-for="link in links" :key="link.text" router :to="link.route">
+                        <v-icon left class="lightgray--text">{{link.icon}}</v-icon>
+                        <v-list-item-title class="lightgray--text">{{ link.text }}</v-list-item-title>
+                        
+                    </v-list-item>
+                </v-list>
+            </v-menu> 
+            
             <v-btn @click="toggleTheme" text>Toggle Theme</v-btn>
             <v-btn depressed color="light-grey">
                 <span>Sign Out</span>
@@ -21,6 +44,9 @@
                     </v-avatar>
                 </v-col>
                 <v-col cols="12" class="py-0 d-flex justify-center">Ninja</v-col>
+                <v-col cols="12" class="d-flex justify-center">
+                    <Popup/>
+                </v-col>
             </v-row>
             <v-list>
                 <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
@@ -37,7 +63,10 @@
 </template>
 
 <script>
+import Popup from './Popup'
+
 export default {
+    components:{Popup},
     data(){
         return{
             drawer: false,

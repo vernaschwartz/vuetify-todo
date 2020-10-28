@@ -33,8 +33,8 @@ export default {
   data(){
     return{
       team:[
-        {name: 'Ninja', role:'Web Developer', avatar: '/avatar1.png'},
-        {name: 'Ryu', role:'Graphic Designer', avatar: '/avatar2.png'},
+        {name: 'Ninja', role:'Web Developer', avatar: '/avatar2.png'},
+        {name: 'Ryu', role:'Graphic Designer', avatar: '/avatar1.png'},
         {name: 'Chun Li', role:'Web Developer', avatar: '/avatar3.png'},
         {name: 'Gouken', role:'Social Media', avatar: '/avatar4.png'},
         {name: 'Yoshi', role:'Sales', avatar: '/avatar5.png'}
